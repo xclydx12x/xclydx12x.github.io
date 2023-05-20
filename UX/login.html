@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+
+    <link rel="stylesheet" href="style.css">
+
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+
+    
+
+    <body onload="showName()">
+
+        <div class="navbar">
+
+            <a href="javascript:void(0)" class="titleX" onclick="gotoIndex()">USER EXPERIENCE</a>
+
+            <a href="javascript:void(0)" class="learn" onclick="gotoLearn()">Learn</a>
+
+            <a href="javascript:void(0)" class="about" onclick="gotoAbout()">About</a>
+
+            <a href="javascript:void(0)" id="login" class="login" onclick="gotoLogin()">Login</a>
+
+        </div>
+
+        
+
+        <center>
+
+            <h1 id="loginWelcome" class="loginWelcome">Welcome</h1>
+
+            <button class="loginButton" onclick="login()">Login</button>
+
+            <br>
+
+            <button class="logoutButton" onclick="logout()">Logout</button>
+
+        </center>
+
+    </body>
+
+    
+
+    <script>
+
+        function showName() {
+
+            var username = localStorage.getItem("username");
+
+            var loginButton = document.getElementById("login");
+
+            
+
+            if (username != "" && username != null && username != "null") {
+
+                loginButton.innerHTML = username;
+
+                loginButton.style.color = "#bad6d6";
+
+            }
+
+        }
+
+        
+
+        function login () {
+
+            var username = localStorage.getItem("username");
+
+            
+
+            while (1) {
+
+                username = prompt("Enter username: ", username);
+
+                if (username != "" && username != null && username != "null") {
+
+                    localStorage.setItem("username", username);
+
+                    break;
+
+                }
+
+            }
+
+            
+
+            document.getElementById("loginWelcome").innerHTML = "You have been successfully logged in"
+
+            alert("Welcome, " + username + "!\x0A")
+
+            window.location.href = "index.html";
+
+        }
+
+        
+
+        function logout () {
+
+            localStorage.clear();
+
+            document.getElementById("loginWelcome").innerHTML = "You have been successfully logged out";
+
+            document.getElementById("login").innerHTML = "Login";
+
+        }
+
+        
+
+        function gotoIndex () {
+
+            window.location.href = "index.html";
+
+        }
+
+        
+
+        function gotoLogin() {
+
+            window.location.href = "login.html";
+
+        }
+
+    </script>
+
+</html>
+
