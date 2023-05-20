@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html>
+
+    <link rel="stylesheet" href="style.css"/>
+
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+
+    
+
+    <body onload="showName()">
+
+        <div class="navbar">
+
+            <a href="javascript:void(0)" class="titleX" onclick="gotoIndex()">USER EXPERIENCE</a>
+
+            <a href="javascript:void(0)" class="learn" onclick="gotoIndex()">Home</a>
+
+            <a href="javascript:void(0)" class="about" onclick="gotoLearn()">Learn</a>
+
+            <a href="javascript:void(0)" id="login" class="login" onclick="gotoLogin()">Login</a>
+
+        </div>
+
+        
+
+        <div class="article">
+
+            <center>
+
+                <h1 class="articleTitle">USER EXPERIENCE</h1>
+
+                
+
+                <img class="img1" src="images/images (8).jpeg" width="75%" height="75%">
+
+            </center>
+
+            
+
+            <center>
+
+                <h1 class="subtitle1">Why is UX design so important?</h1>
+
+            </center>
+
+            
+
+            <p class="articleBody1">
+
+                The user experience is a critical consideration in attracting and retaining users or customers.
+
+            </p>
+
+            
+
+            <p class="articleBody1">
+
+                Consider any physical or digital product. If users don't need the product, don't enjoy using the product or can't reasonably use the product without undue difficulty, those users will simply stop using the product and adopt a competitor's product instead. This can adversely affect the reputation and revenue of the business.
+
+            </p>
+
+            
+
+            <p class="articleBody1">
+
+                Conversely, an effective and reliable product that fills a clear need and offers good performance and support can drive business revenue, boost business reputation and enhance user loyalty to the business and its brand.
+
+            </p>
+
+            
+
+            <p class="articleBody1">
+
+                Because users provide the business revenue derived from products or services, a good user experience can actually be a matter of survival for most businesses. Consequently, ignoring or taking shortcuts around UX issues -- such as usability testing or user acceptance testing -- can be a perilous decision for project managers and product stakeholders.
+
+            </p>
+
+            
+
+            <p class="articleBody5">
+
+                Finally, UX design should be treated as a dynamic part of any product design. UX design decisions made today aren't permanent, and user experience strategies are regularly updated and modified as market demands, competitive forces, user expectations and enabling technologies evolve over time. User research and user experience testing are often employed to periodically reassess UX design choices.
+
+            </p>
+
+            
+
+            <center>
+
+                <h1 class="subtitle1">What does a UX designer do?</h1>
+
+            </center>
+
+            
+
+            <p class="articleBody1">
+
+                In general terms, a UX designer plays a central role in product design and is typically responsible for the user's overall product or service satisfaction. A UX designer can often approach the role as a customer advocate by looking for new and innovative ways to improve the customer's experience through the product or service using the following why, what and how considerations:
+
+            </p>
+
+            
+
+            <ul class="articleBody2">
+
+                <li>
+
+                    <p style="font-weight: bold;">Why</p>addresses user motivations in selecting and using a product.
+
+                </li>
+
+                
+
+                <li>
+
+                    <p style="font-weight: bold;">What</p>addresses the features and functionalities of the product.
+
+                </li>
+
+                
+
+                <li>
+
+                    <p style="font-weight: bold;">How</p>addresses the accessibility and aesthetics of the product.
+
+                </li>
+
+            </ul>
+
+            
+
+            <p class="articleBody1">
+
+                In more specific terms, UX designers perform a variety of design-related tasks. They are as follows:
+
+            </p>
+
+            
+
+            <ul class="articleBody2">
+
+                <li>
+
+                    Understand the business, the brand and the user base, as well as the problem the product is intended to solve.
+
+                </li>
+
+                
+
+                <li>
+
+                    Research users to identify behaviors, needs, goals and challenges through tools such as surveys, interviews, focus groups and user acceptance testing.
+
+                </li>
+
+                
+
+                <li>
+
+                    Use that understanding and research to visualize how user workflows should operate; for example, what does a clear and concise software menu or interface look like?
+
+                </li>
+
+                
+
+                <li>
+
+                    Design the product using mockups, wireframes, models or other prototypes to give other stakeholders and designers a clear picture of the product, including the UI.
+
+                </li>
+
+                
+
+                <li>
+
+                    Test the product to validate user interactions and acceptance; make changes to the design as needed to optimize the design for user experience.
+
+                </li>
+
+            </ul>
+
+            
+
+            <center style="display: inline;">
+
+                <p style="font-size:10px; padding-top: 50px; padding-left: 50px; padding-right: 50px; padding-bottom: 20px;">Bigelow, S. J. & McLaughlin, E. (2022, October). What is UX Design? User Experience Overview. TechTarget. Retrieved May 19, 2023, from https://www.techtarget.com/searchcio/definition/UX-user-experience.</p>
+
+            </center>
+
+        </div>
+
+    </body>
+
+    
+
+    <script>
+
+        function showName() {
+
+            var username = localStorage.getItem("username");
+
+            var loginButton = document.getElementById("login");
+
+            
+
+            if (username != "" && username != null && username != "null") {
+
+                loginButton.innerHTML = username;
+
+                loginButton.style.color = "#bad6d6";
+
+            }
+
+        }
+
+        
+
+        function gotoIndex () {
+
+            window.location.href = "index.html";
+
+        }
+
+        
+
+        function gotoLearn () {
+
+            window.location.href = "learn.html";
+
+        }
+
+        
+
+        function gotoLogin() {
+
+            window.location.href = "login.html";
+
+        }
+
+    </script>
+
+</html>
+
