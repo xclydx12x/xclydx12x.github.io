@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html>
+
+    <link rel="stylesheet" href="style.css"/>
+
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+
+    
+
+    <body onload="showName()">
+
+        <div class="navbar">
+
+            <a href="javascript:void(0)" class="titleX" onclick="gotoIndex()">USER EXPERIENCE</a>
+
+            <a href="javascript:void(0)" class="learn" onclick="gotoIndex()">Home</a>
+
+            <a href="javascript:void(0)" class="about" onclick="gotoLearn()">Learn</a>
+
+            <a href="javascript:void(0)" id="login" class="login" onclick="gotoLogin()">Login</a>
+
+        </div>
+
+        
+
+        <div class="article">
+
+            <center>
+
+                <h1 class="articleTitle">USER EXPERIENCE</h1>
+
+                
+
+                <img class="img1" src="images/images (7).jpeg" width="75%" height="75%">
+
+            </center>
+
+            
+
+            <p class="articleBody1">
+
+                User experience (UX) design is the process and practice used to design and implement a product that will provide positive and relevant interactions with users. UX design, sometimes called user-centric or user-centered design, involves all aspects of product development and design, including the following:
+
+            </p>
+
+            
+
+            <ul class="articleBody2">
+
+                <li>
+
+                    packaging and branding
+
+                </li>
+
+                <li>
+
+                    installation and setup
+
+                </li>
+
+                <li>
+
+                    operation, usability, and performance
+
+                </li>
+
+            </ul>
+
+            
+
+            <p class="articleBody1">
+
+                In short, UX design helps designers create products that are both practical and usable. UX design addresses the following six major areas:
+
+            </p>
+
+            
+
+            <ol class="articleBody2">
+
+                <li>
+
+                    <p style="font-weight: bold;">Usefulness</p> The product must fill a practical need for the user.
+
+                </li>
+
+                
+
+                <li>
+
+                    <p style="font-weight: bold;">Desirability</p>The product must use attractive and consistent aesthetics, such as visual design.
+
+                </li>
+
+                
+
+                <li>
+
+                    <p style="font-weight: bold;">Usability</p>The product must be simple to use and provide a familiar suite of features and functions.
+
+                </li>
+
+                
+
+                <li>
+
+                    <p style="font-weight: bold;">Accessibility</p>The product must be usable by everyone, including users with disabilities.
+
+                </li>
+
+                
+
+                <li>
+
+                    <p style="font-weight: bold;">Supportability</p>The product must be well-supported so that users can resolve problems quickly and easily.
+
+                </li>
+
+                
+
+                <li>
+
+                    <p style="font-weight: bold;">Credibility</p>The product must be trustworthy -- such as from a reputable company or implementing careful security.
+
+                </li>
+
+            </ol>
+
+            
+
+            <p class="articleBody5">
+
+                While UX design is often associated with software or digital services design, the term is also readily applied to any physical product or construct.
+
+            </p>
+
+            
+
+            <center style="display: inline;">
+
+                <p style="font-size:10px; padding-top: 50px; padding-left: 50px; padding-right: 50px; padding-bottom: 20px;">Bigelow, S. J. & McLaughlin, E. (2022, October). What is UX Design? User Experience Overview. TechTarget. Retrieved May 19, 2023, from https://www.techtarget.com/searchcio/definition/UX-user-experience.</p>
+
+            </center>
+
+        </div>
+
+    </body>
+
+    
+
+    <script>
+
+        function showName() {
+
+            var username = localStorage.getItem("username");
+
+            var loginButton = document.getElementById("login");
+
+            
+
+            if (username != "" && username != null && username != "null") {
+
+                loginButton.innerHTML = username;
+
+                loginButton.style.color = "#bad6d6";
+
+            }
+
+        }
+
+        
+
+        function gotoIndex () {
+
+            window.location.href = "index.html";
+
+        }
+
+        
+
+        function gotoLearn () {
+
+            window.location.href = "learn.html";
+
+        }
+
+        
+
+        function gotoLogin() {
+
+            window.location.href = "login.html";
+
+        }
+
+    </script>
+
+</html>
+
