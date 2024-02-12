@@ -1,0 +1,120 @@
+html {
+    min-height:100%;
+}
+
+body {
+  height: 100%;
+  background: #fc8eac;
+  background-image: linear-gradient(#ffd1df, #ffffff);
+}
+
+.clyde {
+  display: block;
+}
+
+.letter {
+  display: none;
+}
+
+.letterBody {
+  opacity: 0;
+  animation: opaque 3s forwards;
+  width: auto;
+}
+
+@keyframes opaque {
+  0% {
+    margin-top: -350px;
+    opacity: 0.3;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    margin-top: -75px;
+    opacity: 1;
+  }
+}
+
+.envelope, .envelope::before, .envelope::after {
+  margin-top: 50px;
+  animation: envelope1 1.5s infinite;
+}
+
+.envelope:hover {
+  margin-top: 50px;
+  content: url("letter4.png");
+  animation-play-state: paused;
+}
+
+@keyframes envelope1 {
+  0% {
+    margin-top: 50px;
+  }
+  50% {
+    margin-top: 60px;
+  }
+  100% {
+    margin-top: 50px;
+  }
+}
+
+@keyframes firework {
+  0% { 
+    transform: translate(-50%, 60vh);
+    width: 0.5vmin;
+    opacity: 1;
+  }
+  50% { 
+    width: 0.5vmin;
+    opacity: 1;
+  }
+  100% { 
+    width: 45vmin; 
+    opacity: 0; 
+  }
+}
+
+.firework,
+.firework::before,
+.firework::after {
+  --top: 60vh;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.5vmin;
+  aspect-ratio: 1;
+  background:
+    url("heart.png") 50% 00%,
+    url("heart.png") 00% 50%,
+    url("heart.png") 50% 99%,
+    url("heart.png") 99% 50%,
+    url("heart.png") 80% 90%,
+    url("heart.png") 95% 90%,
+    url("heart.png") 10% 60%,
+    url("heart.png") 31% 80%,
+    url("heart.png") 80% 10%,
+    url("heart.png") 90% 23%,
+    url("heart.png") 45% 20%,
+    url("heart.png") 13% 24%
+    ;
+  background-size: 10vmin 10vmin;
+  background-repeat: no-repeat;
+  animation: firework 2s paused;
+}
+
+.firework::before {
+  transform: translate(-50%, -50%) rotate(25deg) !important; 
+}
+
+.firework::after {
+  transform: translate(-50%, -50%) rotate(-37deg) !important;
+}

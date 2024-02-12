@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xhtml:html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+	<xhtml:head>
+		<xhtml:meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<xhtml:link rel="icon" href="heart.png"/>
+		<xhtml:link rel="stylesheet" href="style.css"/>
+		<xhtml:title>happy anniversary! &#60;3</xhtml:title>
+	</xhtml:head>
+
+	<xhtml:body>
+		<xhtml:center>
+			<xhtml:div class="background">
+				<xhtml:a class="event" href="#" onclick="animation1();">
+					<xhtml:img class="envelope" src="letter1.png"/>
+				</xhtml:a>
+			</xhtml:div>
+
+			<xhtml:img class="clyde" src="clyde.png"/>
+
+			<xhtml:div class="letter">
+				<xhtml:img class="letterBody" src="mydearestella.png"/>
+			</xhtml:div>
+
+			<xhtml:div class="firework"/>
+		</xhtml:center>
+	</xhtml:body>
+
+	<xhtml:script>
+		function animation1() {
+			x_1 = document.getElementsByClassName("letter")[0x0];
+			x_2 = document.getElementsByClassName("letterBody")[0x0];
+			x_3 = document.getElementsByClassName("envelope")[0x0];
+			x_4 = document.getElementsByClassName("firework")[0x0];
+
+			x_4.style.animationPlayState = "running";
+			x_3.src = "letter3.png";
+			x_3.style.animationPlayState = "paused";
+			x_2.style.opacity = 1;
+			x_1.style.display = "block";
+		}
+	</xhtml:script>
+</xhtml:html>
