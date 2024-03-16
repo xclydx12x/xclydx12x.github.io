@@ -24,10 +24,10 @@
 		var output = "X";
 		var outputx = "X";
 
-		var seconds = (Math.floor((date2.getTime() - date1.getTime()) / 1000) % 60);
-		var minutes = (Math.floor((date2.getTime() - date1.getTime()) / 60000) % 60);
-		var hours = (Math.floor((date2.getTime() - date1.getTime()) / 3600000) % 24);
-		var days = (Math.floor((date2.getTime() - date1.getTime()) / 86400000) % 30.437);
+		var seconds = Math.floor(Math.floor((date2.getTime() - date1.getTime()) / 1000) % 60);
+		var minutes = Math.floor(Math.floor((date2.getTime() - date1.getTime()) / 60000) % 60);
+		var hours = Math.floor(Math.floor((date2.getTime() - date1.getTime()) / 3600000) % 24);
+		var days = Math.floor(Math.floor((date2.getTime() - date1.getTime()) / 86400000) % 30.437);
 		var months = Math.floor(((date2.getTime() - date1.getTime()) / 2628000000) % 12);
 		var years = Math.floor((date2.getTime() - date1.getTime()) / 31540000000);
 
@@ -67,7 +67,7 @@
 		if (seconds == 1) {
 			outputx = outputx + "1 second";
 		} else {
-			outputx = outputx + seconds + " seconds";
+			outputx = outputx + seconds + " seconds old";
 		}
 
 		xx.innerHTML = output;
