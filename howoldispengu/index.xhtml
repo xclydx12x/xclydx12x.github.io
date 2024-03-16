@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xhtml:html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<xhtml:head>
+	<xhtml:meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<xhtml:title>How Old Is Pengu 🐧?</xhtml:title>
+</xhtml:head>
+
+<xhtml:body onload="getDate()" style="background-color: #e0e0e0">
+	<xhtml:center>
+		<xhtml:h1 style="font-family: New Century Schoolbook, TeX Gyre Schola, serif; font-size: 250%; letter-spacing: 3px; margin-top: 50px; color: #1c1c1c">How Old Is Pengu 🐧?</xhtml:h1>
+		<xhtml:h3 style="font-family: New Century Schoolbook, TeX Gyre Schola, serif; margin-top: 50px; font-size: 150%; color: #1c1c1c">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</xhtml:h3>
+		<xhtml:h3 class="xx" style="font-family: New Century Schoolbook, TeX Gyre Schola, serif; margin-top: -10px; font-size: 150%; color: #1c1c1c">X</xhtml:h3>
+		<xhtml:h3 class="xxx" style="font-family: New Century Schoolbook, TeX Gyre Schola, serif; margin-top: -10px; font-size: 150%; color: #1c1c1c">X</xhtml:h3>
+		<xhtml:h3 style="font-family: New Century Schoolbook, TeX Gyre Schola, serif; margin-top: -10px; font-size: 150%; color: #1c1c1c">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</xhtml:h3>
+	</xhtml:center>
+</xhtml:body>
+
+<xhtml:script>
+	var counts = setInterval(getDate);
+
+	function getDate () {
+		var date1 = new Date(2023, 11, 4);
+		var date2 = new Date();
+		var output = "X";
+		var outputx = "X";
+
+		var seconds = Math.floor(Math.floor((date2.getTime() - date1.getTime()) / 1000) % 60);
+		var minutes = Math.floor(Math.floor((date2.getTime() - date1.getTime()) / 60000) % 60);
+		var hours = Math.floor(Math.floor((date2.getTime() - date1.getTime()) / 3600000) % 24);
+		var days = Math.floor(Math.floor((date2.getTime() - date1.getTime()) / 86400000) % 30.437);
+		var months = Math.floor(((date2.getTime() - date1.getTime()) / 2628000000) % 12);
+		var years = Math.floor((date2.getTime() - date1.getTime()) / 31540000000);
+
+		xx = document.getElementsByClassName("xx")[0x0];
+		xxx = document.getElementsByClassName("xxx")[0x0];
+
+		if (years == 1) {
+			output = "1 year, ";
+		} else {
+			output = years + " years, ";
+		}
+
+		if (months == 1) {
+			output = output + " 1 month, and ";
+		} else {
+			output = output + months + " months, ";
+		}
+
+		if (days == 1) {
+			output = output + " 1 day, ";
+		} else {
+			output = output + days + " days, ";
+		}
+
+		if (hours == 1) {
+			outputx = "1 hour, ";
+		} else {
+			outputx = hours + " hours, ";
+		}
+
+		if (minutes == 1) {
+			outputx = outputx + " 1 minute, and ";
+		} else {
+			outputx = outputx + minutes + " minutes, and ";
+		}
+
+		if (seconds == 1) {
+			outputx = outputx + "1 second";
+		} else {
+			outputx = outputx + seconds + " seconds old";
+		}
+
+		xx.innerHTML = output;
+		xxx.innerHTML = outputx;
+	}
+</xhtml:script>
+</xhtml:html>
